@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
 @PreviewScreenSizes
 @Composable
 fun VotuApp() {
-    var currentDestination by rememberSaveable { mutableStateOf(AppDestinations.HOME) }
+    var currentDestination by rememberSaveable { mutableStateOf(AppDestinations.CONCERTS) }
 
     NavigationSuiteScaffold(
         navigationSuiteItems = {
@@ -68,9 +68,9 @@ enum class AppDestinations(
     val label: String,
     val icon: Int,
 ) {
-    HOME("Home", R.drawable.ic_home),
-    FAVORITES("Favorites", R.drawable.ic_favorite),
-    PROFILE("Profile", R.drawable.ic_account_box),
+    CONCERTS("Upcoming Concerts", R.drawable.ic_home),
+    EVENTS("Nearby Events", R.drawable.ic_nearby),
+    ACCOUNT("Login", R.drawable.ic_account_box),
 }
 
 @Composable
